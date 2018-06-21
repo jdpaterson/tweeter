@@ -53,6 +53,10 @@
   color: inherit;
 }
 
+.tweet-container time {
+	margin: 0px 15px 5px;
+	padding:15px;
+}
 .iconDiv {
   float: right;
   margin-right: 15px;

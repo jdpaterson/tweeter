@@ -1,8 +1,24 @@
 $(document).ready(function(){
-  renderTweets();
+  getTweets();
   $('#new-tweet').hide();
 
 });
+
+toastr.options = {
+  "positionClass": "toast-top-center",
+}
+
+function formValid(){
+  if ($('#txtNewTweet').val().length > 140){
+    toastr.error('Tweets cannot be more than 140 characters long!');
+    return false;
+  }else if($('#txtNewTweet').val().length === 0){
+    toastr.error('Enter something in!');
+    return false;
+  }else{
+    return true;
+  }
+}
 
 function submitTweet(){
     if (formValid()){
@@ -10,35 +26,19 @@ function submitTweet(){
       $.ajax('/tweets', {
         method: 'POST',
         data: data
-      }).done(function(result) {
+      }).done(function() {
         $('#new-tweet').hide(200);
-        renderTweets();
+        getTweets();
       });
     }
 }
 
-function formValid(){
-  if ($('#txtNewTweet').val().length > 140){
-    const err = `<div class="alert">
-            <strong>Tweets must be less than 140 characters</strong>
-            </div>`;
-    $('.new-tweet').append(err);
-    return false;
-  }else if($('#txtNewTweet').val().length === 0){
-    const err = `<div class="alert">
-            <strong>Enter something in!</strong>
-            </div>`;
-    $('.new-tweet').append(err);
-    return false;
-  }else{
-    return true;
-  }
-}
-
-function renderTweets(){
+function getTweets(){
   const data = $.ajax('/tweets').done(function(res){
+    res.sort(function(a, b){return a.created_at - b.created_at}).reverse();
+    $('#tweetListing').empty();
     for (tweet in res){
-      $('.container').append(createTweet(res[tweet]));
+      $('#tweetListing').append(createTweet(res[tweet]));
     }
     $('.iconDiv').hide();
     initListeners();
@@ -90,14 +90,15 @@ function initListeners(){
   $('#btnCompose').on('click', function(ev){
     $('#new-tweet').toggle(400);
     $('#new-tweet textarea').focus();
+    ev.stopPropogation();
   });
 
   $('form').on('submit', function(ev){
     ev.preventDefault();
     submitTweet();
+    ev.stopPropogation();
   });
 }
-
 
 function escape(str) {
   var div = document.createElement('div');

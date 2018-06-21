@@ -1,52 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<head>
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/reset.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
+  <div class="div"></div>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet" />
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" />
 
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="/scripts/moment.min.js"></script>
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/reset.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js" ></script>
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <body>
-    <!-- Top nav bar (fixed) -->
 
-    <nav id="nav-bar">
-      <button id="btnCompose" >Compose</button>
-      <header>
-        <img src="/images/bird.png">
-        <h2>Tweeter</h2>
-      </header>
+</head>
 
-    </nav>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section id="new-tweet" class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form action="/tweets" method="POST">
-          <textarea id="txtNewTweet" name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
-          <span id="newTweetCounter" class="counter">140</span>
-        </form>
-      </section>      
-    </main>
-  </body>
+<body>
+  <!-- Top nav bar (fixed) -->
+
+  <nav id="nav-bar">
+    <button id="btnCompose">Compose</button>
+    <header>
+      <img src="/images/bird.png">
+      <h2>Tweeter</h2>
+    </header>
+
+  </nav>
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <section id="new-tweet" class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form action="/tweets" method="POST">
+        <textarea id="txtNewTweet" name="text" placeholder="What are you humming about?"></textarea>
+        <input type="submit" value="Tweet">
+        <span id="newTweetCounter" class="counter">140</span>
+      </form>
+    </section>
+    <div id="tweetListing"></div>
+  </main>
+</body>
+
+<!-- External JS -->
+<script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="/scripts/moment.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+<!-- App JS -->
+<script type="text/javascript" src="/scripts/app.js"></script>
+<script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
 </html>
