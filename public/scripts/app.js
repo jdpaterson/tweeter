@@ -1,7 +1,6 @@
 $(document).ready(function(){
   getTweets();
   $('#new-tweet').hide();
-
 });
 
 toastr.options = {
@@ -38,7 +37,9 @@ function getTweets(){
     res.sort(function(a, b){return a.created_at - b.created_at}).reverse();
     $('#tweetListing').empty();
     for (tweet in res){
-      $('#tweetListing').append(createTweet(res[tweet]));
+      if(res[tweet].user !== undefined){
+        $('#tweetListing').append(createTweet(res[tweet]));
+      }
     }
     $('.iconDiv').hide();
     initListeners();
