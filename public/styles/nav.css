@@ -27,9 +27,9 @@
 
 #nav-bar button {
 	float: right;
-	margin: 30px;
-	height: 40px;
-  border-radius: 5px;
+	margin: 15px;
+	height: 75px;
+  border-radius: 100px;
 }
 
 #nav-bar button:hover {
