@@ -48,7 +48,7 @@ function getTweets(){
 
 function createTweet(tweet){
   return `
-  <section class="tweet-container">
+  <section class="tweet-container" >
       <header>
         <img src="${escape(tweet.user.avatars.small)}" />
         <p class="handle">
