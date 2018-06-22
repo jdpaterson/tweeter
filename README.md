@@ -1,12 +1,11 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone. It is hosted on Heroku and uses MongoDB, Express, and Node.js .
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
 
 ## Final Product
 
-To test go to: https://stark-anchorage-32786.herokuapp.com/
+Go to: https://stark-anchorage-32786.herokuapp.com/
 
 !["URLs View"](https://github.com/jdpaterson/tweeter/blob/master/ReadMeFiles/ComposeTweets.png)
 !["Login Page"](https://github.com/jdpaterson/tweeter/blob/master/ReadMeFiles/ReadTweets.png)
