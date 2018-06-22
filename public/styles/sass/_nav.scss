@@ -1,0 +1,37 @@
+$headerColour: #00a087;
+
+#nav-bar {
+  background-color: $headerColour;
+  color: #e8fdff;
+  height: 100px;
+
+  img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  header {
+    font-size: 32px;
+    width: 250px;
+    margin: 0px 10px;
+    padding: 5px;
+
+    h2 {
+      margin-top: 25px;
+    }
+
+  }
+
+  button {
+    float: right;
+    margin: 30px;    
+  }
+
+  button:hover {
+    background-color: #a9a9e4;
+  }
+
+}

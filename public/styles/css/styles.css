@@ -1,0 +1,194 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  color: #244751;
+  background-color: #eee;
+  font-family: "Roboto Condensed", sans-serif;
+}
+body main.container {
+  width: 650px;
+  background-color: white;
+  padding: 25px 50px;
+  margin: auto;
+}
+
+#nav-bar {
+  background-color: #00a087;
+  color: #e8fdff;
+  height: 100px;
+}
+#nav-bar img {
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  padding: 5px;
+}
+#nav-bar header {
+  font-size: 32px;
+  width: 250px;
+  margin: 0px 10px;
+  padding: 5px;
+}
+#nav-bar header h2 {
+  margin-top: 25px;
+}
+#nav-bar button {
+  float: right;
+  margin: 30px;
+}
+#nav-bar button:hover {
+  background-color: #a9a9e4;
+}
+
+section.new-tweet {
+  padding: 10px 10px 0px;
+  margin: 35px 0px 0px;
+  border-radius: 10px;
+  background-color: #b7b7b74d;
+  border: solid #244751 0.5px;
+}
+section.new-tweet h2 {
+  margin: 0px 10px;
+  border-bottom: solid black 2px;
+  font-size: 24px;
+  padding: 5px 5px;
+}
+section.new-tweet form {
+  margin: 5px 5px 0px;
+  padding: 5px 5px 0px;
+}
+section.new-tweet form textarea {
+  height: 130px;
+  width: 95%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 15px;
+}
+section.new-tweet form input {
+  margin: 15px;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+section.new-tweet .counter {
+  float: right;
+  margin: 15px 35px;
+}
+
+.tweet-container {
+  margin: 20px 0px;
+  background-color: white;
+  border-radius: 15px;
+  border: solid #b9b7b7 1px;
+  color: #b9b7b7;
+  overflow: auto;
+}
+.tweet-container header {
+  height: 85px;
+  padding: 5px;
+  background-color: #b7b7b74d;
+}
+.tweet-container header img {
+  float: left;
+  border-radius: 15px;
+  margin: 5px 15px;
+  height: 60px;
+  width: 60px;
+}
+.tweet-container header h2 {
+  margin: 25px;
+  font-size: 24px;
+}
+.tweet-container header .handle {
+  float: right;
+  margin: 25px;
+}
+.tweet-container article {
+  background-color: white;
+  height: 130px;
+  padding: 20px;
+  border-bottom: 0.5px gray solid;
+}
+.tweet-container footer {
+  background-color: white;
+  height: 15px;
+  padding: 5px;
+  margin-bottom: 15px;
+  font-size: small;
+  font-weight: lighter;
+}
+.tweet-container time {
+  float: left;
+  padding: 10px;
+}
+.tweet-container .iconDiv {
+  float: right;
+  padding: 5px;
+}
+.tweet-container .iconDiv i {
+  padding: 5px;
+}
+
+.tweet-container:hover {
+  border: solid #244751 1px;
+  color: inherit;
+}
+
+/*# sourceMappingURL=styles.css.map */

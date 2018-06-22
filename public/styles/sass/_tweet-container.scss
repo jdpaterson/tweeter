@@ -1,0 +1,68 @@
+.tweet-container {
+	margin: 20px 0px;
+	background-color: white;
+	border-radius: 15px;
+	border: solid #b9b7b7 1px;
+  color: #b9b7b7;
+  overflow: auto;
+
+  header {
+  	height: 85px;
+    padding: 5px;
+  	background-color: #b7b7b74d;
+
+    img {
+    	float: left;
+    	border-radius: 15px;
+    	margin: 5px 15px;
+      height: 60px;
+      width: 60px;
+    }
+
+    h2{
+    	margin: 25px;
+    	font-size: 24px;
+    }
+
+    .handle {
+    	float: right;
+    	margin: 25px;
+    }
+
+  }
+
+  article {
+  	background-color: white;
+  	height: 130px;
+  	padding: 20px;
+    border-bottom: 0.5px gray solid;
+  }
+
+  footer {
+  	background-color: white;
+  	height: 15px;
+  	padding: 5px;
+  	margin-bottom: 15px;
+    font-size: small;
+    font-weight: lighter;
+  }
+
+  time {
+		float: left;
+  	padding:10px;
+  }
+
+  .iconDiv {
+    float: right;
+		padding: 5px;
+
+		i {
+			padding: 5px;
+		}
+  }
+}
+
+.tweet-container:hover {
+  border: solid #244751 1px;
+  color: inherit;
+}
